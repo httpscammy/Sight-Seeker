@@ -1,4 +1,4 @@
-const webURL = "https://symmetrical-happiness-wpgrp6pj5rw2vj96-3001.app.github.dev";
+const webURL = "https://literate-space-doodle-gj5wxwjpx4jf9596-3001.app.github.dev/";
 
 const getState = ({ getStore, getActions, setStore }) => {
   return {
