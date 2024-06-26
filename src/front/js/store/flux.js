@@ -15,10 +15,10 @@ const getState = ({ getStore, getActions, setStore }) => {
       getParkInfo: async () => {
         let opt = {
           method: "GET",
-          headers: { "x-api-key": process.env.PARK_SERVICE_API_KEY },
+          headers: { "x-api-key": "512wN5Ol0eTdyS4E6KexHiCdDezf6hpcCbbsnPcn" },
         };
         try {
-          const response = await fetch(process.env.PARK_SERVICE_URL, opt);
+          const response = await fetch("https://developer.nps.gov/api/v1/parks", opt);
 
           if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
@@ -145,7 +145,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           opts
         )
           .then((resp) => resp.json())
-          .then((data) => setStore({ activity: data.map(activity => activity.activity_type) }))
+          .then((data) => {console.log("data:", data); setStore({ activity: data.map(activity => activity.activity_type) })})
           .catch((error) => console.log("Error", error));
       },
 
