@@ -44,7 +44,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
         try {
           const response = await fetch(
-            `${webURL}/api/uploadphoto`,
+            `${webURL}api/uploadphoto`,
             opts
           );
 
@@ -67,7 +67,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           },
         };
         await fetch(
-          `${webURL}/api/usersphoto`,
+          `${webURL}api/usersphoto`,
           opts
         )
           .then((resp) => resp.json())
@@ -89,7 +89,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
         try {
           const response = await fetch(
-            `${webURL}/api/uploadphoto`,
+            `${webURL}api/uploadphoto`,
             opts
           );
           if (!response.ok) {
@@ -116,7 +116,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         };
         try {
           const response = await fetch(
-            `${webURL}/api/useractivities`,
+            `${webURL}api/useractivities`,
             opts
           );
 
@@ -141,7 +141,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           },
         };
         await fetch(
-          `${webURL}/api/useractivities`,
+          `${webURL}api/useractivities`,
           opts
         )
           .then((resp) => resp.json())
@@ -166,7 +166,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           };
           try {
             const response = await fetch(
-              `${webURL}/api/useractivities`,
+              `${webURL}api/useractivities`,
               opts
             );
 
@@ -198,7 +198,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
         try {
           const response = await fetch(
-            `${webURL}/api/activity/${activity}`,
+            `${webURL}api/activity/${activity}`,
             opts
           );
           if (!response.ok) {
@@ -224,7 +224,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           })
         };
         await fetch(
-          `${webURL}/api/userinfo`,
+          `${webURL}api/userinfo`,
           opts
         )
           .then((resp) => resp.json())
@@ -241,7 +241,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           },
         };
         await fetch(
-          `${webURL}/api/usersinfo`,
+          `${webURL}api/usersinfo`,
           opts
         )
           .then((resp) => resp.json())
@@ -265,7 +265,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
         try {
           const response = await fetch(
-            `${webURL}/api/userinfo`,
+            `${webURL}api/userinfo`,
             opts
           );
           if (!response.ok) {
@@ -288,7 +288,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           },
         };
         await fetch(
-          `${webURL}/api/favorites`,
+          `${webURL}api/favorites`,
           opts
         )
           .then((resp) => resp.json())
@@ -307,7 +307,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
         try {
           const response = await fetch(
-            `${webURL}/api/favorite/${park_id}`,
+            `${webURL}api/favorite/${park_id}`,
             opts
           );
           if (!response.ok) {
@@ -353,7 +353,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           })
         };
         try {
-          const resp = await fetch(`${webURL}/api/signup`, opts)
+          const resp = await fetch(`${webURL}api/signup`, opts)
           if (resp.status !== 200) {
             alert("There has been some error");
             return false;
@@ -380,7 +380,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           })
         };
         try {
-          const resp = await fetch(`${webURL}/api/token`, opts)
+          const resp = await fetch(`${webURL}api/token`, opts)
           if (resp.status !== 200) {
             alert("There has been some error");
             return false;
@@ -403,7 +403,7 @@ const getState = ({ getStore, getActions, setStore }) => {
             "Authorization": "Bearer " + store.token
           }
         };
-        fetch(`${webURL}/api/hello`, opts)
+        fetch(`${webURL}api/hello`, opts)
           .then(resp => resp.json())
           .then(data => setStore({ message: data.message }))
           .catch(error => console.log("Error loading message from backend", error));
@@ -424,7 +424,7 @@ const getState = ({ getStore, getActions, setStore }) => {
             park_id: id
           })
         };
-        fetch(`${webURL}/api/favorite`, opts)
+        fetch(`${webURL}api/favorite`, opts)
           .then(resp => resp.json())
           .catch(error => console.log("Error", error));
       },
